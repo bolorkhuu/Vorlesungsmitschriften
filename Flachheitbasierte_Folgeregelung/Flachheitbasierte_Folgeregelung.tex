@@ -1,0 +1,310 @@
+\documentclass[ngerman]{tudscrreprt}
+\usepackage{selinput}
+\SelectInputMappings{adieresis={ä},germandbls={ß}}
+\usepackage[T1]{fontenc}
+\usepackage{babel} \usepackage{isodate}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{float} % lädt das Paket zur Verwendung von zusätzlichen Positionsbefehlen
+\usepackage{wrapfig}  
+\usepackage{picinpar}   
+\usepackage{hyperref}
+
+\begin{document}
+\faculty{Fakultät Elektrotechnik und Informationstechnik} \department{} \institute{INSTITUT FÜR REGELUNGS- UND STEUERUNGSTHEORIE} \chair{} \title{Flachheitsbasierte Folgeregelung\\Dr.-Ing. F. Woittennek
+}
+% \thesis{diss}
+% \degree[Dr.-Ing.]{Doktor-Ingenieur}
+\author{Mitschrift von Bolor Khuu}
+% \dateofbirth{2.1.1990}
+% \placeofbirth{Dresden}
+\date{\today}
+% \defensedate{20.10.2014}
+% \referee{Dagobert Duck \and Mac Moneysac}
+\maketitle
+\tableofcontents
+\newpage
+\chapter{Einführung}
+\subsection*{Kinematisches Modell eines zweiachsichen Fahrzeuges}
+Beschreibung der Lage
+\begin{itemize}
+\item Position Hinterachsenmittelpunkt H:
+\begin{equation*}
+\underline{y} = y_1 \underline e_1 + y_2 \underline e_2
+\end{equation*}
+\item Position des Vorderachsenmittelpunkts:
+\begin{equation*}
+\underline{y}_v = y_{1,v} \underline e_1 + y_{2,v} \underline e_2
+\end{equation*}
+\item Ausrichtung des Fahrzeuges:
+\begin{equation*}
+\underline{\tau} = \underline e_1 \cos{\theta} + \underline e_2 \sin{\theta}
+\end{equation*}
+\item zugerhörige Normalenvektor: 
+\begin{equation*}
+\underline{\nu} = -\underline e_1\sin{\theta} + \underline e_2 \cos{\theta} = \frac{d\underline{\tau}}{d\theta}
+\end{equation*}
+\item Ausrichtung der Vorderräder:
+\begin{equation*}
+\underline{\tau}_\nu = \cos{\theta + \varphi}\underline e_1 + \sin{\theta + \varphi} \underline e_2 = \cos{\varphi} \underline{\tau} + \sin{\varphi}\underline{\nu}
+\tag{1}
+\end{equation*}
+\item zugerhöriger Normalenvektor:
+\begin{equation*}
+\underline{\nu}_v = -\sin{\varphi}\underline{\tau} + \cos{\varphi} \underline \nu
+\label{Eq:norma2}
+\tag{2}
+\end{equation*}
+\end{itemize}
+Ausrichtung der Bindungen
+\begin{itemize}
+\item Vorderachsenmittelpunkt ist starr mit Hinterachse verbunden (Abstand $l$)
+\begin{equation*}
+\underline{y}_v = \underline y + l \underline \tau
+\label{Eq:vord}
+\tag{3}
+\end{equation*}
+\item Hinterräder rollen, ohne zu gleiten:
+\begin{equation*}
+\dot{\underline{y}} = v \underline \tau 
+\tag{4}
+\end{equation*}
+\item Differenzieren von \eqref{Eq:vord}:
+\begin{equation*}
+\dot{\underline{y}}_v = \dot{\underline y} + l \underline \tau = v \underline \tau + l \underline \nu \dot{\theta}
+\tag{5}
+\end{equation*}
+\item Vorderräder rollen, ohne zu gleiten: 
+\begin{equation*}
+\langle \underline{\nu}_v, \dot{\underline{y}}_v \rangle = 0
+\end{equation*}
+\item aus \eqref{Eq:norma2} folgt unter Beachtung von 
+\begin{equation*}
+\langle \underline{\nu},\underline{\tau}\rangle = \langle \underline \tau , \underline \nu \rangle = 0
+\end{equation*}
+\begin{equation*}
+\langle \underline{\tau},\underline{\tau}\rangle = \langle \underline \nu , \underline \nu \rangle = 1
+\end{equation*}
+der Zusammenhang: 
+\begin{equation*}
+\begin{matrix}
+\langle \nu_v , \dot{y}_v \rangle &= &\langle -\sin{\varphi}\underline {\tau} + \cos{\varphi}\underline \nu , v\underline \tau + l \underline \nu \dot{\theta}\rangle\\ 
+&=& \langle -\sin{\varphi \underline \tau , v \underline \tau \rangle + \langle -\sin{\varphi}}\underline{\tau}, l \underline \nu \dot{\theta} \rangle + \langle \cos{\varphi}\underline \nu , v \underline \tau \rangle + \langle \cos{\varphi}\underline \nu , l \underline \nu \dot{\theta} \rangle \\ 
+&=& -v \sin{\varphi} + \cos{\varphi} l \dot{\theta}
+\end{matrix}
+\tag{6}
+\end{equation*}
+\item Zusammenfassung Modell: 
+\begin{equation*}
+\begin{matrix}
+\dot y_1 &=& v\cos{\theta}& \Leftrightarrow \dot{\underline y} = v\underline \tau\\ 
+\dot y_2 &=& v\sin{\theta}&
+\end{matrix}
+\tag{7a}
+\end{equation*}
+\begin{equation*}
+\tan{\varphi} = \frac{l\dot{\theta}}{v}
+\tag{7b}
+\end{equation*}
+\end{itemize}
+\section*{Flachheit des Fahrzeugmodells}
+Ziel: Berechnung alles Systemgrößen $(y_1, y_2, \varphi, \theta, v)$ aus Bahn des Hinterachsenmittelpunktes 
+\begin{itemize}
+\item Geschwindigkeit aus (7a): \\ 
+\begin{equation*}
+|v| = |v| |\underline \tau| = |\dot{\underline y}| = \sqrt{{\dot{\underline y}_1}^2 + {\dot{\underline y}}_2^2} \Rightarrow v = \pm |\dot{\underline y}|
+\tag{8}
+\end{equation*}
+\item Orientierung: 
+\begin{equation*}
+\underline \tau = \frac{\dot{\underline y}}{v} = \frac{\dot{\underline y}}{\pm |\dot{\underline y}|}
+\tag{9}
+\end{equation*}
+\item zugerhöriger Winkel:
+\begin{equation*}
+\tan{\theta} = \frac{\dot y_2}{\dot y_1}
+\tag{10}
+\end{equation*}
+
+\item Differenzieren (7a) liefert: 
+\begin{equation*}
+v \dot{\theta}\underline \nu + \dot {v} \underline \tau = \ddot{\underline y}
+\tag{11}
+\end{equation*}
+\item skalare Multiplikation mit $v, \underline \nu = - \dot{y}_2 \underline e_1 + \dot y_1 \underline e_2$ 
+\begin{equation*}
+v^2 \dot \theta = \langle \ddot{\underline y}, -\dot y_2 \underline e_1 + \underline{\dot{y}}_1 e_2 \rangle = -\ddot{y}_1 \dot{y}_2 + \ddot y_2 \dot y_1 \Rightarrow \dot \theta = \frac{\ddot y_2 \dot y_1 - \ddot y_1 \dot y_2}{{\dot y_1}^2 + {\dot y_2}^2}
+\tag{12}
+\end{equation*}
+\item Lenkwinkel: 
+\begin{equation*}
+\tan{\varphi} = l \frac{\ddot y_2 \dot y_1 - \ddot y_1 \dot y_2}{\pm{({\dot y_1}^2 + {\dot y_2}^2)}^{3/2}}
+\tag{13}
+\end{equation*}
+\end{itemize}
+\section*{Flachheitsbasierter Steuerungsentwurf für das Fahrzeug} 
+Vorüberlegungen:
+\begin{itemize}
+\item Wahl einer Übergangszeit $t_f$
+\item Wahl von Anfangs- und Endbedingungen 
+\begin{equation*}
+(y_1(0), y_2(0), \theta(0), \varphi(0), v(0), \dot{v}(0)), (y_1(t_f), y_2(t_f), \theta(t_f),\varphi(t_f), \dot v (t_f))
+\end{equation*}
+\item Berechnung der zugerhörigen Bindungen für flachen Ausgang aus (7a) und (11)
+\begin{equation*}
+\begin{matrix}
+\dot{\underline y} &=& v \underline \tau &=& v(\underline e_1 \cos{\theta} + \underline e_2 \sin{\theta})&\\ 
+\ddot{\underline y}&=& \dot v \tau + v \dot \theta \nu &=& \dot v (\underline e_1 \cos{\theta} + e_2 \sin{\theta} ) + \frac{v^2 \tan{\varphi}}{l}& \qquad (-\sin{\theta} \underline e_1 + \cos{\theta} \underline e_2)
+\end{matrix}
+\end{equation*}
+\item Vorgabe der Solltrajektorie für den flachen Ausgang als zweimal differenzierbare Zeitfunktion $t \to \underline y_d(t)$ unter Berücksichtigung der Anfangs- und Endbedingungen
+\item Steuerung: Berechnung der Zeitverläufe aller Systemgrößen (u.a. Stellgrößen aus $t \to y_d (t)$)
+\end{itemize}
+\section*{Flachheitsbasierter Folgeregler}
+\subsection*{Problem} Anfangsfehler , Störung, ungenau Modellparameter, nicht modellierte Modelleigenschaften (z.B. Schlupf) verursachen Abweichungen von geplanten Bahn 
+\subsection*{Lösung} Regler zur Zurückführung des Fahrzeuges auf geplanten Bahn (Stabilisierung der Folgebewegung)
+\subsection*{Annahme} Position und Orientierung des Fahrzeuges sind bekannt
+\subsection*{Folgefehler} 
+% \begin{equation*} 
+% \underline{e} = 
+% \begin{pmatrix} e_1(t)\\ 
+% e_2(t) 
+% \end{pmatrix} = 
+% \begin{pmatrix} 
+% y_1(t)- y_{1,1(t)\\ 
+% y_2(t)- y_{2,d}(6) 
+% \end{pmatrix}
+% \end{equation*}
+\subsection*{Ziel} Folgefehler soll abklingen: $\lim_{t\to \infty} e_i(t)= 0, \quad i =1,2$
+Ziel erreicht, wenn Folgefehler sich wie stabile Oszillatoren verhalten. 
+\begin{equation*}
+\ddot{e}_i(t) + 2\delta_i \omega_i \dot{e}_i(t) + \omega_i^2 e_i(t) = 0 \quad i =1,2,\quad \delta_i \omega_i > 0 
+\tag{15}
+\end{equation*}
+Gleichung (15) kompakt: 
+\begin{equation*}
+\underline{\ddot{e}}(t) + K_1 \underline{\dot{e}}(t) + K_0 \underline{e}(t) = 0, \qquad K_1 = \text{diag}(2\delta_1\omega_1, 2\delta_2\omega_2), K_0 = \text{diag}(\omega_1^2, \omega_2^2)
+\end{equation*}
+\subsection*{Frage}: Wie müssen Stellgrößen gewählt werden, von um (15) zu erreichen? 
+\begin{itemize}
+\item aus (14) und (15) folgt: 
+\begin{equation*}
+\ddot{y}_(t)= \underline{\ddot{y}}_d(t) - K_1\underline{\dot{e}}(t) - K_0 \underline{e}(t) = \underline{\ddot{y}}_d - K_1(v(t)\underline{\tau}(t) - \underline{\dot{y}}_d(t)) 
+\end{equation*}
+fehlt etwas
+\item 
+Auflösen nach $\dot v$ bzw. $v \dot{\theta}$ durch skalare Multiplikation mit $\underline{v}$bzw.  $\underline{\tau}$ 
+\begin{equation*}
+\dot v = \langle \underline{\ddot y}_d - K_1 (v \underline \tau - \underline{\dot y}_d ) - K_0 (\underline y - \underline y_d), \underline{\tau} \rangle \tag{16a}
+\end{equation*}
+\begin{equation*}
+v \dot{\theta} = \rangle \underline{\dot{y}}_d - K_1(v\underline{\tau}- \underline{\dot{y}}_d) -K_0(\underline y - \underline y_d), \underline \nu \rangle \tag{16b}
+\end{equation*}
+\item (16a) ist DGL für Stellgröße $v$ (Anfangsbedingungen für $v$ aus Solltrajektorie)$\Rightarrow$ dynamischer Regler
+\item (16b) liefert mit (13) den Lenkwinkel. 
+\begin{equation*}
+\varphi = \text{arctan}(  l\frac{\langle \underline{\ddot{y}}_d - K_1(v\underline{\tau} - \underline{\dot y}_d - K_0 (\underline y - \underline{y}_d)), \underline{\nu}  \rangle}{v^2})
+\end{equation*}
+\item Regler aus (16) (17a) mit Anfangsbedingung $v_0 = v_d$
+\end{itemize}
+\subsection*{Problem} Singularität bei $v=0$ vorhanden Steuerung /Regelung des Fahrzeuges in/aus Ruhelagen (Abschnitt 3)
+\section*{Zusammenfassung:}\begin{itemize}
+\item Entwurf eines Folgereglers in zwei Schritten: Plannung einer Solltrajektorie und Stabilisierung entlang der Solltrajektorie
+\item Verwendung eines flachen Ausgangs erleichtert beide Schritte beschriebenes Vorgehen ist für flache Systeme generell möglich 
+\end{itemize}
+\chapter{Flache Systeme}
+Ausgangspunkt: System von $q$ gewöhnlichen , nichtlinearen DGLen in den Systemgrößen $z = (z_1,\dots, z_s)$ 
+\begin{equation*}
+S_i (z_i,\dots, z^{\sigma_i}) = 0, \quad i=1,\dots,q \tag{1}
+\end{equation*}
+Spezialfall nichtlineares Zustandsgleichungenssystem: 
+\begin{equation*}
+\underline{\dot{x}} = \underline{f}(\underline{x},\underline{u}),\quad \underline{x}\in \mathrm{R}^u, u\in \mathrm{R}^m
+\end{equation*}
+in der Form (1) $z=(x_1, \dots, x_n, u_1,\dots, u_m)$
+\begin{equation*}
+S_i(z,\dot z) = \dot{x}_i - f_i(\underline{x},\underline{u}),\qquad i=1,\dots, n
+\end{equation*}
+\section{Definition der flachen Systeme}
+Interpretation:
+\begin{itemize}
+\item{(I)}. Trajektorien für $y$ können frei gewählt werden
+\item{(II)}. Berechnung der Zeitverläufe der Systemgrößen aus jenen von $y$ (ohne Integration) möglich 
+\end{itemize}
+\subsection{Unendlich viele Ausgänge}
+\begin{itemize}
+\item flacher Ausgang nicht eindeutig 
+\item Umrechnung zweier flacher Ausgänge $\tilde y$ und $y$ mittel (II)
+\begin{equation*}
+\begin{matrix}
+\tilde y_i &=& \psi_i(y, \dot{y}),&\quad& i = 1,\dots, \tilde m\\ 
+y_i &=& \tilde{\psi}_i(\tilde y, \tilde{y}, \dots)&\quad& i =1,\dots, m
+\end{matrix}
+\end{equation*}
+\item man kann zeigen, dass $\tilde m = m$ (jeder flache Ausgang hat gleiche Anzahl an Komponenten)
+\end{itemize}
+\subsection{Zur differentiellen Unabhängigkeit der flachen Ausgangs}
+\begin{itemize}
+\item Überprüfung der differentiellen Unabhängigkeit im allgemein schwierig
+\item sei $y=(y_1, \dots, y_m)$ mit $m = s-q$ ein $m$-Tupel, das $(II)$ genügt
+\item Transformation $\Phi$: $(z_1, \dots, z_s) \to (\bar z_1,\dots, \bar z_s)$
+\begin{equation*}
+\begin{matrix}
+\bar z_1 &=& y_1 &=& \phi_1(z,\dots, z^{\beta_1})\\ 
+\vdots &&&&\\
+\bar z_m &=& y_m &=&\phi_m(z, \dot z, \dots,z^{\beta_m})\\
+\bar z_{m+1}&=& &&S_1(z, \dot z, \dots) = 0\\ 
+\vdots &&&&\\
+\bar z_{s} &=& && S_q(z, \dot z, \dots) = 0  
+\end{matrix}
+\end{equation*}
+mit Rücktransformation: 
+\begin{equation*}
+\begin{matrix}
+z_1 &=& \psi_n(y,\bar y,\dots) \\ 
+\vdots &&\\ 
+z_s &=& \psi_s(y, \dot y,\dots)
+\end{matrix}
+\end{equation*}
+\item in neuen Koordinaten $\bar z$ gilt: \begin{equation*}
+\bar z_{m+1} = \dots = \bar z_s = 0 \tag{2} 
+\end{equation*}
+$(y_1,\dots, y_m) = (\bar z_1, \dots, \bar z_m)$ kommt in (2) nicht vor $\Rightarrow$ differentielle Unabhängigkeit offensichtlich 
+\end{itemize}
+\subsection*{Folgerung}
+\begin{itemize}
+\item{1.} Ein flacher Ausgang eines durch $q$ (unabhängige Gleichung gegebenen Systems für $s$ Größen hat stets $m=s-q$ Komponenten.)
+\item{2.} Genügt $y= (y,\dots,y_m)$ der Bedingung $(II)$, so ist Bedingung $(I)$ automatisch erfüllt.
+\end{itemize}
+\subsection{Ebenes Modell eines Brückenkrans}
+\begin{itemize}
+\item Modell mit Systemgrößen: $y_1,y_2, D_2, R, \theta, T, \omega, C,F$ 
+\begin{itemize}
+\item Impulserhaltung für Last. 
+\begin{equation*}
+m(\underline{\ddot{y}} - \underline{g}) = -T\underline{\tau} \tag{3a}
+\end{equation*}
+\item geometrischer Zussamenhang zwischen Wagen und Lastposition 
+\begin{equation*}
+\underline y = D_2 \underline{e}_2 + R\underline{\tau} \tag{3b}
+\end{equation*}
+\item Impulserhalung für Wagen
+\begin{equation*}
+M\ddot{D}_2 = F + T\sin{\theta} - c_d \dot{D}_2, \qquad c_d \dots\text{Reibkoeffizient} \tag{3c}
+\end{equation*}
+\item Drehimpulsbilanz Rolle
+\begin{equation*}
+J\dot{\omega} = C - \rho T - c_r \omega,\qquad c_r\dots\text{Reibkoeffizient}\tag{3d}
+\end{equation*}
+\item Zusammenhang Seillänge Winkelgeschwindigkeit 
+\begin{equation*}
+\dot R = -\rho \omega \tag{3e}
+\end{equation*}
+mit 
+\begin{equation*}
+\underline{\tau} = \cos{\theta}\underline{e}_1 + \sin{\theta}\underline{e}_2,\qquad \underline{\nu} = -\sin{\theta}\underline{e}_1 + \cos{\theta}\underline{e}_2 \tag{4}
+\end{equation*}
+\end{itemize}
+\item Pendelteilsystem besteht aus (3a) und (3b) mit Größen $R,\theta, y_1,y_2,T,D_2$ besitzt gleichen flachen Ausgang wie Gesamtsystem
+\end{itemize}
+\end{document}

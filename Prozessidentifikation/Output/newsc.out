@@ -1,0 +1,38 @@
+\BOOKMARK [0][-]{title.0}{Titelblatt}{}% 1
+\BOOKMARK [0][-]{toc.0}{Inhaltsverzeichnis}{}% 2
+\BOOKMARK [0][-]{chapter.1}{Einf\374hrung}{}% 3
+\BOOKMARK [1][-]{section.1.1}{Aufgaben und Ziele der Prozessanalyse}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.2}{Allgemein Strategien}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.3}{Modellvorstellung zu Prozessen}{chapter.1}% 6
+\BOOKMARK [0][-]{chapter.2}{Problemformulierung f\374r statische Modelle}{}% 7
+\BOOKMARK [1][-]{subsection.2.0.1}{Einf\374hrungsbeispiel}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.0.2}{Unterteilung statischer Modelle}{subsection.2.0.1}% 9
+\BOOKMARK [2][-]{subsection.2.0.3}{Linearit\344t \(Allgemein\)}{subsection.2.0.1}% 10
+\BOOKMARK [2][-]{subsection.2.0.4}{Linearit\344t und Parameterlinearit\344t}{subsection.2.0.1}% 11
+\BOOKMARK [2][-]{subsection.2.0.5}{Problemformulierung}{subsection.2.0.1}% 12
+\BOOKMARK [2][-]{subsection.2.0.6}{Fehlermodelle}{subsection.2.0.1}% 13
+\BOOKMARK [2][-]{subsection.2.0.7}{G\374tekriterium: Normen}{subsection.2.0.1}% 14
+\BOOKMARK [0][-]{chapter.3}{Methode der kleinsten Fehlerquadrate}{}% 15
+\BOOKMARK [1][-]{section.3.1}{Basisalgorithmus}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.2}{L\366sungsans\344tze f\374r unbestimmte lineare Gleichungssysteme}{chapter.3}% 17
+\BOOKMARK [2][-]{subsection.3.2.1}{Erinnerung: L\366sbarkeit linearer Gleichungssystem.}{section.3.2}% 18
+\BOOKMARK [2][-]{subsection.3.2.2}{Rangbestimmung und Singul\344rzerlegung}{section.3.2}% 19
+\BOOKMARK [2][-]{subsection.3.2.3}{L\366sbarkeit des Systems der Normalengleichungen}{section.3.2}% 20
+\BOOKMARK [2][-]{subsection.3.2.4}{L\366sung der Normalengleichungen mittels Cholesky Zerlegung}{section.3.2}% 21
+\BOOKMARK [2][-]{subsection.3.2.5}{Direkte L\366sung des Quadratmittelproblems auf der Basis von Orthogonalesierungsverfahren}{section.3.2}% 22
+\BOOKMARK [2][-]{subsection.3.2.6}{Direkte L\366sungsdarstellung mittels verallgemeinerter Inverser}{section.3.2}% 23
+\BOOKMARK [1][-]{section.3.3}{Parameternichtlineare Modelle}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.3.1}{Newton-Verfahren}{section.3.3}% 25
+\BOOKMARK [2][-]{subsection.3.3.2}{Gauss-Newton-Verfahren}{section.3.3}% 26
+\BOOKMARK [2][-]{subsection.3.3.3}{Totale MKQ}{section.3.3}% 27
+\BOOKMARK [0][-]{chapter.4}{Anwendungen der MKQ}{}% 28
+\BOOKMARK [1][-]{section.4.1}{Verallgemeinerung des Fehlermodellls}{chapter.4}% 29
+\BOOKMARK [2][-]{subsection.4.1.1}{Einf\374hrungsbeispiel: Diodenmodell}{section.4.1}% 30
+\BOOKMARK [2][-]{subsection.4.1.2}{Verallgemeinerter Fehler}{section.4.1}% 31
+\BOOKMARK [1][-]{section.4.2}{Zeitdiskrete Modelle}{chapter.4}% 32
+\BOOKMARK [2][-]{subsection.4.2.1}{\334bergang in zeitdiskreten Modellen}{section.4.2}% 33
+\BOOKMARK [2][-]{subsection.4.2.2}{ARX-Modelle}{section.4.2}% 34
+\BOOKMARK [2][-]{subsection.4.2.3}{Sonderfall: FIR-Filter}{section.4.2}% 35
+\BOOKMARK [2][-]{subsection.4.2.4}{Weitere Modellans\344tze}{section.4.2}% 36
+\BOOKMARK [1][-]{section.4.3}{Zeitkontinuierliche Modelle}{chapter.4}% 37
+\BOOKMARK [2][-]{subsection.4.3.1}{ARX-Differentialgleichungsmodell}{section.4.3}% 38

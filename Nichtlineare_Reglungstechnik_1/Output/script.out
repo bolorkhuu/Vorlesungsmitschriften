@@ -1,0 +1,37 @@
+\BOOKMARK [0][-]{title.0}{Titelblatt}{}% 1
+\BOOKMARK [0][-]{toc.0}{Inhaltsverzeichnis}{}% 2
+\BOOKMARK [0][-]{chapter.1}{Grundbegriffe und Eigenschaften nichtlinearer Systeme}{}% 3
+\BOOKMARK [1][-]{section.1.1}{Nichtlineare \334bertragungsglieder}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.2}{Typische Ph\344nomene in nichtlinearen Systeme}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.3}{Lipschitz-Bedingung und Stetigkeit}{chapter.1}% 6
+\BOOKMARK [0][-]{chapter.2}{Analyse nichtlinearer Systeme 2. Ordnung in der Phasenebene bzw, N\344he ihrer Ruhelagen, Phasenportraits}{}% 7
+\BOOKMARK [1][-]{section.2.1}{Einf\374hrung-Motivation}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.2}{Qualitatives Verhalten linearer System}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.3}{Qualatatives Verhalten nichtlinearer Systeme in der N\344he ihrer Ruhelage}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.4}{Konstruktion des gesamten Phasenportraits}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.5}{Existenz von Dauerschwingung, bzw. Grenzzyklen}{chapter.2}% 12
+\BOOKMARK [0][-]{chapter.3}{Methode der harmonische Balance}{}% 13
+\BOOKMARK [1][-]{section.3.1}{Einf\374hrungsbeispiel}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.2}{Grundlagen der Methoden}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.3}{Berechnung der Beschreibungsfunktion}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.4}{L\366sung der Gleichung der harmonischen Balance}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.5}{Stabilit\344t von Dauerschwingungen}{chapter.3}% 18
+\BOOKMARK [0][-]{chapter.4}{Stabilit\344t nach Ljapunov}{}% 19
+\BOOKMARK [1][-]{section.4.1}{Stabilit\344tsbegriff}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.2}{Direkte \(zweite\) Methode von Ljapunov}{chapter.4}% 21
+\BOOKMARK [2][-]{subsection.4.2.1}{Einf\374hrungsbeispiel}{section.4.2}% 22
+\BOOKMARK [2][-]{subsection.4.2.2}{Positiv Definite Funktionen}{section.4.2}% 23
+\BOOKMARK [2][-]{subsection.4.2.3}{Stabilit\344tskriterium}{section.4.2}% 24
+\BOOKMARK [1][-]{section.4.3}{Invarianzprinzip \(Satz von La Salle\)}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.4}{Variable Gradientenmethode}{chapter.4}% 26
+\BOOKMARK [0][-]{chapter.5}{Intergrator-Backstepping}{}% 27
+\BOOKMARK [1][-]{section.5.1}{Einf\374hrungsbeispiel}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.2}{Verallgemeinerung}{chapter.5}% 29
+\BOOKMARK [0][-]{chapter.6}{Sliding-Mode-Control}{}% 30
+\BOOKMARK [1][-]{section.6.1}{Einf\374hrungsbeispiel}{chapter.6}% 31
+\BOOKMARK [1][-]{section.6.2}{Verallgemeinerung}{chapter.6}% 32
+\BOOKMARK [0][-]{chapter.7}{Feedbacklinearisierung}{}% 33
+\BOOKMARK [1][-]{section.7.1}{Fehlt etwas}{chapter.7}% 34
+\BOOKMARK [2][-]{subsection.7.1.1}{fehlt etwas}{section.7.1}% 35
+\BOOKMARK [2][-]{subsection.7.1.2}{Relativer Grad}{section.7.1}% 36
+\BOOKMARK [2][-]{subsection.7.1.3}{Verallgemeinerter Entwurf}{section.7.1}% 37
