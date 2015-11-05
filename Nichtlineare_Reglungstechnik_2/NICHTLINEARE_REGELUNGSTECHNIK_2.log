@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.17)  21 OCT 2015 13:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.17)  5 NOV 2015 16:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1198,10 +1198,10 @@ Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              a package that still implements the
 (scrreprt)              deprecated \float@addtolist interface .
 
-<image1.pdf, id=198, 679.7142pt x 283.45554pt>
-File: image1.pdf Graphic file (type pdf)
- <use image1.pdf>
-Package pdftex.def Info: image1.pdf used on input line 34.
+<images/image1.pdf, id=198, 679.7142pt x 283.45554pt>
+File: images/image1.pdf Graphic file (type pdf)
+ <use images/image1.pdf>
+Package pdftex.def Info: images/image1.pdf used on input line 34.
 (pdftex.def)             Requested size: 213.39566pt x 88.99052pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 30--35
@@ -1212,10 +1212,10 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 48.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language append on input line 48.
-<image2.pdf, id=199, 375.92833pt x 305.3306pt>
-File: image2.pdf Graphic file (type pdf)
- <use image2.pdf>
-Package pdftex.def Info: image2.pdf used on input line 53.
+<images/image2.pdf, id=199, 375.92833pt x 305.3306pt>
+File: images/image2.pdf Graphic file (type pdf)
+ <use images/image2.pdf>
+Package pdftex.def Info: images/image2.pdf used on input line 53.
 (pdftex.def)             Requested size: 156.49014pt x 127.10118pt.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 61.
@@ -1225,12 +1225,13 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 61.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language append on input line 61.
- [3
 
- <./image1.pdf> <./image2.pdf
+[3
 
-pdfTeX warning: pdflatex (file ./image2.pdf): PDF inclusion: multiple pdfs with
- page group included in a single page
+ <./images/image1.pdf> <./images/image2.pdf
+
+pdfTeX warning: pdflatex (file ./images/image2.pdf): PDF inclusion: multiple pd
+fs with page group included in a single page
 >]
 Underfull \hbox (badness 10000) in paragraph at lines 61--64
 
@@ -1283,10 +1284,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 254--255
 
  []
 
-<image17_1.pdf, id=237, 287.81815pt x 235.04958pt>
-File: image17_1.pdf Graphic file (type pdf)
- <use image17_1.pdf>
-Package pdftex.def Info: image17_1.pdf used on input line 284.
+<images/image17_1.pdf, id=237, 287.81815pt x 235.04958pt>
+File: images/image17_1.pdf Graphic file (type pdf)
+
+<use images/image17_1.pdf>
+Package pdftex.def Info: images/image17_1.pdf used on input line 284.
 (pdftex.def)             Requested size: 99.58464pt x 81.3253pt.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 313.
@@ -1296,7 +1298,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 313.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language append on input line 313.
- [7 <./image17_1.pdf>]
+ [7 <./images/image17_1.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 362.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1309,11 +1311,12 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 364.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language append on input line 364.
- [8] <image17_2.pdf, id=252, 385.43448pt x 274.27284pt>
-File: image17_2.pdf Graphic file (type pdf)
+ [8]
+<images/image17_2.pdf, id=252, 385.43448pt x 274.27284pt>
+File: images/image17_2.pdf Graphic file (type pdf)
 
-<use image17_2.pdf>
-Package pdftex.def Info: image17_2.pdf used on input line 399.
+<use images/image17_2.pdf>
+Package pdftex.def Info: images/image17_2.pdf used on input line 399.
 (pdftex.def)             Requested size: 128.0374pt x 91.11296pt.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 410.
@@ -1323,17 +1326,18 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 410.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language append on input line 410.
- [9 <./image17_2.pdf>]
-<image21.pdf, id=259, 337.65652pt x 293.65884pt>
-File: image21.pdf Graphic file (type pdf)
- <use image21.pdf>
-Package pdftex.def Info: image21.pdf used on input line 427.
-(pdftex.def)             Requested size: 128.0374pt x 111.3585pt.
+ [9 <./images/image17_2.pdf>]
+<images/image21.pdf, id=259, 337.65652pt x 293.65884pt>
+File: images/image21.pdf Graphic file (type pdf)
 
-<image3.pdf, id=260, 375.63098pt x 244.136pt>
-File: image3.pdf Graphic file (type pdf)
- <use image3.pdf>
-Package pdftex.def Info: image3.pdf used on input line 436.
+<use images/image21.pdf>
+Package pdftex.def Info: images/image21.pdf used on input line 427.
+(pdftex.def)             Requested size: 128.0374pt x 111.3585pt.
+ <images/image3.pdf, id=260, 375.63098pt x 244.136pt>
+File: images/image3.pdf Graphic file (type pdf)
+
+<use images/image3.pdf>
+Package pdftex.def Info: images/image3.pdf used on input line 436.
 (pdftex.def)             Requested size: 128.0374pt x 83.21375pt.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 451.
@@ -1343,14 +1347,15 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 451.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language append on input line 451.
- [10 <./image21.pdf> <./image3.pdf
+ [10 <./images/image21.pdf> <./images/image3.pdf
 
-pdfTeX warning: pdflatex (file ./image3.pdf): PDF inclusion: multiple pdfs with
- page group included in a single page
->] <image4.pdf, id=270, 320.52867pt x 268.2201pt>
-File: image4.pdf Graphic file (type pdf)
- <use image4.pdf>
-Package pdftex.def Info: image4.pdf used on input line 504.
+pdfTeX warning: pdflatex (file ./images/image3.pdf): PDF inclusion: multiple pd
+fs with page group included in a single page
+>] <images/image4.pdf, id=270, 320.52867pt x 268.2201pt>
+File: images/image4.pdf Graphic file (type pdf)
+
+<use images/image4.pdf>
+Package pdftex.def Info: images/image4.pdf used on input line 504.
 (pdftex.def)             Requested size: 128.0374pt x 107.14288pt.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 509.
@@ -1360,7 +1365,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 509.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language append on input line 509.
- [11 <./image4.pdf>]
+ [11 <./images/image4.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 539.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1407,10 +1412,11 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 638.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language append on input line 638.
- <im3_12.pdf, id=303, 669.56355pt x 279.83945pt>
-File: im3_12.pdf Graphic file (type pdf)
- <use im3_12.pdf>
-Package pdftex.def Info: im3_12.pdf used on input line 644.
+ <images/im3_12.pdf, id=303, 669.56355pt x 279.83945pt>
+File: images/im3_12.pdf Graphic file (type pdf)
+
+<use images/im3_12.pdf>
+Package pdftex.def Info: images/im3_12.pdf used on input line 644.
 (pdftex.def)             Requested size: 355.65944pt x 148.65152pt.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 669.
@@ -1420,22 +1426,22 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 669.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language append on input line 669.
+ [15 <./images/im3_12.pdf>]
+<images/im3_121.pdf, id=311, 857.34659pt x 486.69125pt>
+File: images/im3_121.pdf Graphic file (type pdf)
 
-[15 <./im3_12.pdf>] <im3_121.pdf, id=311, 857.34659pt x 486.69125pt>
-File: im3_121.pdf Graphic file (type pdf)
-
-<use im3_121.pdf>
-Package pdftex.def Info: im3_121.pdf used on input line 673.
+<use images/im3_121.pdf>
+Package pdftex.def Info: images/im3_121.pdf used on input line 673.
 (pdftex.def)             Requested size: 213.39566pt x 121.13782pt.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 676.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language append on input line 676.
- <im3122.pdf, id=312, 350.34036pt x 209.99242pt>
-File: im3122.pdf Graphic file (type pdf)
 
-<use im3122.pdf>
-Package pdftex.def Info: im3122.pdf used on input line 681.
+<images/im3122.pdf, id=312, 350.34036pt x 209.99242pt>
+File: images/im3122.pdf Graphic file (type pdf)
+ <use images/im3122.pdf>
+Package pdftex.def Info: images/im3122.pdf used on input line 681.
 (pdftex.def)             Requested size: 213.39566pt x 127.90932pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 691--693
@@ -1450,10 +1456,10 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 706.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language append on input line 706.
-[16 <./im3_121.pdf> <./im3122.pdf
+[16 <./images/im3_121.pdf> <./images/im3122.pdf
 
-pdfTeX warning: pdflatex (file ./im3122.pdf): PDF inclusion: multiple pdfs with
- page group included in a single page
+pdfTeX warning: pdflatex (file ./images/im3122.pdf): PDF inclusion: multiple pd
+fs with page group included in a single page
 >]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 755.
@@ -1494,16 +1500,18 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 838.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language append on input line 838.
-[19] <image332.pdf, id=344, 307.98323pt x 242.4047pt>
-File: image332.pdf Graphic file (type pdf)
- <use image332.pdf>
-Package pdftex.def Info: image332.pdf used on input line 846.
+[19] <images/image332.pdf, id=344, 307.98323pt x 242.4047pt>
+File: images/image332.pdf Graphic file (type pdf)
+
+<use images/image332.pdf>
+Package pdftex.def Info: images/image332.pdf used on input line 846.
 (pdftex.def)             Requested size: 184.9429pt x 145.56598pt.
 
-<robmod1.pdf, id=345, 241.87712pt x 170.77567pt>
-File: robmod1.pdf Graphic file (type pdf)
- <use robmod1.pdf>
-Package pdftex.def Info: robmod1.pdf used on input line 861.
+<images/robmod1.pdf, id=345, 241.87712pt x 170.77567pt>
+File: images/robmod1.pdf Graphic file (type pdf)
+
+<use images/robmod1.pdf>
+Package pdftex.def Info: images/robmod1.pdf used on input line 861.
 (pdftex.def)             Requested size: 184.9429pt x 130.57779pt.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 867.
@@ -1513,10 +1521,10 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 867.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language append on input line 867.
- [20 <./image332.pdf> <./robmod1.pdf
+ [20 <./images/image332.pdf> <./images/robmod1.pdf
 
-pdfTeX warning: pdflatex (file ./robmod1.pdf): PDF inclusion: multiple pdfs wit
-h page group included in a single page
+pdfTeX warning: pdflatex (file ./images/robmod1.pdf): PDF inclusion: multiple p
+dfs with page group included in a single page
 >]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 869.
@@ -1580,10 +1588,11 @@ Missing character: There is no ä in font cmr8!
 LaTeX Warning: Command \" invalid in math mode on input line 997.
 
 Missing character: There is no ä in font cmr8!
-<Zeichnung1.pdf, id=392, 242.42442pt x 76.18463pt>
-File: Zeichnung1.pdf Graphic file (type pdf)
- <use Zeichnung1.pdf>
-Package pdftex.def Info: Zeichnung1.pdf used on input line 1008.
+<images/Zeichnung1.pdf, id=392, 242.42442pt x 76.18463pt>
+File: images/Zeichnung1.pdf Graphic file (type pdf)
+
+<use images/Zeichnung1.pdf>
+Package pdftex.def Info: images/Zeichnung1.pdf used on input line 1008.
 (pdftex.def)             Requested size: 241.84842pt x 76.00308pt.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 1014.
@@ -1593,8 +1602,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 1014.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language append on input line 1014.
-
-[25 <./Zeichnung1.pdf>]
+ [25 <./images/Zeichnung1.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 1027.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1648,10 +1656,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 1058--1059
 
  []
 
-<im312.pdf, id=419, 492.38226pt x 94.8456pt>
-File: im312.pdf Graphic file (type pdf)
- <use im312.pdf>
-Package pdftex.def Info: im312.pdf used on input line 1071.
+<images/im312.pdf, id=419, 492.38226pt x 94.8456pt>
+File: images/im312.pdf Graphic file (type pdf)
+ <use images/im312.pdf>
+Package pdftex.def Info: images/im312.pdf used on input line 1071.
 (pdftex.def)             Requested size: 213.39566pt x 41.10553pt.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 1079.
@@ -1665,7 +1673,8 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 1089.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language append on input line 1089.
- [29 <./im312.pdf>]
+
+[29 <./images/im312.pdf>]
 Overfull \hbox (20.48322pt too wide) in paragraph at lines 1100--1100
 [] 
  []
@@ -2005,8 +2014,8 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 14457 strings out of 493089
- 253848 string characters out of 6134841
+ 14458 strings out of 493089
+ 254247 string characters out of 6134841
  540826 words of memory out of 5000000
  17423 multiletter control sequences out of 15000+600000
  32993 words of font info for 90 fonts, out of 8000000 for 9000
@@ -2039,7 +2048,7 @@ ype1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
 e1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
 /public/cm-super/sfsx1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/p
 ublic/cm-super/sfsx2488.pfb>
-Output written on NICHTLINEARE_REGELUNGSTECHNIK_2.pdf (57 pages, 679435 bytes).
+Output written on NICHTLINEARE_REGELUNGSTECHNIK_2.pdf (57 pages, 679399 bytes).
 
 PDF statistics:
  816 PDF objects out of 1000 (max. 8388607)
